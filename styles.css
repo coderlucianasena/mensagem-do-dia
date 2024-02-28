@@ -42,7 +42,6 @@ body {
     padding: 20px 0; /* Espaçamento interno do footer */
     text-align: center; /* Alinhar texto ao centro */
     width: 100%; /* Largura total */
-    background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo com transparência */
     position: fixed; /* Posicionamento fixo */
     bottom: 0; /* Alinhar ao rodapé */
     left: 0; /* Alinhar à esquerda */
