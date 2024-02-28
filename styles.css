@@ -46,4 +46,5 @@ body {
     position: fixed; /* Posicionamento fixo */
     bottom: 0; /* Alinhar ao rodapé */
     left: 0; /* Alinhar à esquerda */
+    font-size: 14px; /* Tamanho fonte */
 }
