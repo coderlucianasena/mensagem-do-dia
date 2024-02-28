@@ -102,7 +102,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // Exibe a mensagem e a data
     document.getElementById("mensagem").textContent = mensagemDoDia;
     document.getElementById("data").textContent = `Data: ${dataAtual.toLocaleDateString()}`;
-});
 
 function getDiaDoAno(date) {
     const start = new Date(date.getFullYear(), 0, 0);
@@ -130,6 +129,29 @@ function compartilharWhatsApp() {
     // Abra uma nova janela do WhatsApp com o link
     window.open(linkWhatsApp);
 }
+
+ // Adicionar evento de clique ao ícone de compartilhamento do WhatsApp
+ document.getElementById("whatsapp-share").addEventListener("click", function(event) {
+    event.preventDefault(); // Evita o comportamento padrão de seguir o link
+
+    // Obtenha os dados da mensagem
+    var titulo = document.getElementById("titulo").innerText;
+    var data = document.getElementById("data").innerText;
+    var mensagem = document.getElementById("mensagem").innerText;
+
+    // Construa o texto do compartilhamento com o link da página
+    var textoCompartilhamento = "Minutos de Sabedoria\n\n" + titulo + "\n" + data + "\n" + mensagem + "\n\nhttps://mensagemdodia.vercel.app/";
+
+    // Codifique o texto para a URL
+    var textoCodificado = encodeURIComponent(textoCompartilhamento);
+
+    // Construa o link de compartilhamento do WhatsApp
+    var linkWhatsApp = "https://api.whatsapp.com/send?text=" + textoCodificado;
+
+    // Redirecione o usuário para a página de compartilhamento do WhatsApp
+    window.location.href = linkWhatsApp;
+});
+});
 
 
 
