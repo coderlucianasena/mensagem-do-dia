@@ -119,7 +119,7 @@ function compartilharWhatsApp() {
     var mensagem = document.getElementById("mensagem").innerText;
 
     // Construa o texto do compartilhamento com o link da página
-    var textoCompartilhamento = "Minutos de Sabedoria:\n\n" + titulo + "\n" + data + "\n" + mensagem + "\n\n https://mensagemdodia.vercel.app/";
+    var textoCompartilhamento = "Minutos de Sabedoria\n\n" + titulo + "\n" + data + "\n" + mensagem + "\n\n https://mensagemdodia.vercel.app/";
 
     // Codifique o texto para a URL
     var textoCodificado = encodeURIComponent(textoCompartilhamento);
