@@ -113,22 +113,24 @@ function getDiaDoAno(date) {
 }
 
 function compartilharWhatsApp() {
-    // Obtém o título, a data e a mensagem
-    var titulo = document.querySelector("h5.card-title").innerText;
+    // Obtenha os dados da mensagem
+    var titulo = document.getElementById("titulo").innerText;
     var data = document.getElementById("data").innerText;
     var mensagem = document.getElementById("mensagem").innerText;
-    
-    // Concatena o título, a data e a mensagem em uma única string
-    var conteudo = titulo + "\n" + data + "\n" + mensagem;
-    
-    // Codifica o conteúdo para incluir no link de compartilhamento
-    var conteudoCodificado = encodeURIComponent(conteudo);
-    
-    // Cria o link de compartilhamento do WhatsApp com o conteúdo
-    var linkCompartilhamento = "whatsapp://send?text=" + conteudoCodificado;
-    
-    // Redireciona para o link de compartilhamento
-    window.location.href = linkCompartilhamento;
+
+    // Construa o texto do compartilhamento com o link da página
+    var textoCompartilhamento = "Confira esta mensagem do dia:\n\n" + titulo + "\n" + data + "\n" + mensagem + "\n\n https://mensagemdodia.vercel.app/";
+
+    // Codifique o texto para a URL
+    var textoCodificado = encodeURIComponent(textoCompartilhamento);
+
+    // Construa o link de compartilhamento do WhatsApp
+    var linkWhatsApp = "https://api.whatsapp.com/send?text=" + textoCodificado;
+
+    // Abra uma nova janela do WhatsApp com o link
+    window.open(linkWhatsApp);
 }
+
+
 
 
