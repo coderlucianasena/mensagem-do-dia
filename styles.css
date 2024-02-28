@@ -1,0 +1,43 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: #343a40; /* Cor de fundo escura */
+    color: #ffffff; /* Cor do texto claro */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    flex: 1;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.3); /* Cor de fundo com transparência */
+    max-width: 400px; /* Largura máxima do card */
+    padding: 20px;
+}
+
+.card-title {
+    font-family: "Press Start 2P", sans-serif;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.social-icons a {
+    margin: 0 10px; /* Espaçamento entre os ícones */
+    font-size: 24px; /* Tamanho dos ícones */
+    color: #ffffff; /* Cor dos ícones */
+}
+
+.share-icon {
+    font-size: 24px; /* Tamanho do ícone */
+    color: #25D366; /* Cor do ícone do WhatsApp */
+}
+
+.footer {
+    color: #ffffff; /* Cor do texto do footer */
+    padding: 20px 0; /* Espaçamento interno do footer */
+}
