@@ -43,7 +43,7 @@ body {
     color: #25D366; /* Cor do ícone do WhatsApp */
 }
 
-.footer a{
+.footer {
     color: #ffffff; /* Cor do texto do footer */
     padding: 20px 0; /* Espaçamento interno do footer */
     text-align: center; /* Alinhar texto ao centro */
